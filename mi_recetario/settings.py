@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mi_recetario.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+'\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'mi_recetario.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'recetario',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': ''
     }
 }
 
@@ -126,3 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
